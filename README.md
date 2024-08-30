@@ -1,1 +1,2 @@
 A simple antivirus in Python. At the user stage, a pre-check occurs based on the weight of the file; if it matches one of those presented in the signatures, the file is transferred to the Docker-container, where a hash and yararules check occurs. The interface is written in pyside6
+Link to files with hash sums and rules: https://drive.google.com/drive/folders/1Rz8pLzJMT4YQvcMEQXRGVrqHhp7Szeyw?usp=sharing
