@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="icon">
+    <file>icons/Telegram_logo.svg.png</file>
+    <file>icons/delete_white_24dp.svg</file>
+    <file>icons/settings_white_24dp.svg</file>
+  </qresource>
+  <qresource prefix="logo">
+    <file>logo.png</file>
+    <file>mainwindow_logo.png</file>
+  </qresource>
+</RCC>

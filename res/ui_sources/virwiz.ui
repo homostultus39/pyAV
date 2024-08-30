@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1063</width>
+    <height>618</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>virwizz</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="res-rc.qrc">
+    <normaloff>:/logo/logo.png</normaloff>:/logo/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:0, y2:0, stop:0 rgba(45, 12, 109, 0.8), stop:0.427447 rgba(95, 12, 109, 0.8), stop:1 rgba(45, 12, 109, 0.8));
+font-family: Montserrat-Bold;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QPushButton" name="selective_scan_button">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>267</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat-Bold</family>
+      <pointsize>13</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: white;
+background-color: rgba(255, 255, 255, 30);
+border-radius:7px;
+}
+QPushButton:hover {
+background-color: rgba(255, 255, 255, 40)
+}
+QPushButton:pressed {
+background-color: rgba(255, 255, 255, 70)
+}</string>
+    </property>
+    <property name="text">
+     <string>Выборочная проверка</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>381</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Motserrat-Bold</family>
+      <pointsize>32</pointsize>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="autoFillBackground">
+     <bool>false</bool>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);
+border: 1px solid rgba(255, 255, 255, 0);
+font-family: Motserrat-Bold;
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>Virus Wizzard</string>
+    </property>
+    <property name="textFormat">
+     <enum>Qt::MarkdownText</enum>
+    </property>
+    <property name="scaledContents">
+     <bool>false</bool>
+    </property>
+    <property name="wordWrap">
+     <bool>false</bool>
+    </property>
+    <property name="margin">
+     <number>0</number>
+    </property>
+    <property name="indent">
+     <number>-1</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="fast_scan_button">
+    <property name="geometry">
+     <rect>
+      <x>800</x>
+      <y>327</y>
+      <width>231</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat-Bold</family>
+      <pointsize>13</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: white;
+background-color: rgba(255, 255, 255, 30);
+border-radius:7px;
+}
+QPushButton:hover {
+background-color: rgba(255, 255, 255, 40)
+}
+QPushButton:pressed {
+background-color: rgba(255, 255, 255, 70)
+}</string>
+    </property>
+    <property name="text">
+     <string>Быстрая проверка</string>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>80</y>
+      <width>311</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat-Bold</family>
+      <italic>true</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: white;</string>
+    </property>
+    <property name="text">
+     <string>С заботой о вашей безопасности</string>
+    </property>
+   </widget>
+   <widget class="QTableView" name="virus_table">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>148</y>
+      <width>701</width>
+      <height>381</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTableView:section {
+background-color: rgba(53, 53, 53);
+color: white;
+border: 1px solid rgba(255, 255, 255, 30);
+height: 50px;
+font-size:14pt
+}
+QTableView:item {
+border: 1px solid rgba(255, 255, 255, 30); 
+color: white;
+}</string>
+    </property>
+    <property name="lineWidth">
+     <number>10</number>
+    </property>
+   </widget>
+   <widget class="QLabel" name="scanning_label">
+    <property name="geometry">
+     <rect>
+      <x>52</x>
+      <y>564</y>
+      <width>980</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat-Bold</family>
+      <pointsize>11</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);
+color: white;</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="del_clear_button">
+    <property name="geometry">
+     <rect>
+      <x>750</x>
+      <y>475</y>
+      <width>71</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Montserrat-Bold</family>
+      <pointsize>13</pointsize>
+      <italic>false</italic>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+color: white;
+background-color: rgba(255, 255, 255, 0);
+border-radius:7px;
+}
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="res-rc.qrc">
+      <normaloff>:/icon/icons/delete_white_24dp.svg</normaloff>:/icon/icons/delete_white_24dp.svg</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+    <property name="autoDefault">
+     <bool>false</bool>
+    </property>
+    <property name="default">
+     <bool>false</bool>
+    </property>
+    <property name="flat">
+     <bool>false</bool>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="feedback_button">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>18</y>
+      <width>91</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton{
+background-color: rgba(255, 255, 255, 0);
+color: white;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="icon">
+     <iconset resource="res-rc.qrc">
+      <normaloff>:/icon/icons/Telegram_logo.svg.png</normaloff>:/icon/icons/Telegram_logo.svg.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>60</width>
+      <height>60</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_4">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>10</y>
+      <width>20</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgba(255, 255, 255, 0);
+</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap resource="res-rc.qrc">:/logo/mainwindow_logo.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="res-rc.qrc"/>
+ </resources>
+ <connections/>
+</ui>
